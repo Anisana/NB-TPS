@@ -9,6 +9,7 @@ import com.netbuilder.tps.services.AvailabilityService;
 
 @Stateless
 public class AvailabilityServiceBean implements AvailabilityService {
+
 	
 	@PersistenceContext
 	private EntityManager em;

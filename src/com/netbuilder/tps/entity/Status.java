@@ -8,30 +8,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Status")
+@Table(name = "Status")
 public class Status implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
-	public Status() {
-		
-	}
-	
+
 	@Id
 	@GeneratedValue
-	private String statusID;
-	
+	private int statusID;
+
 	private String value;
 	
-	public String getStatusID() {
+	public Status() {
+
+	}
+
+	public Status( String value) {
+		
+		this.value = value;
+
+	}
+
+	public int getStatusID() {
 		return statusID;
 	}
-	public void setStatusID(String statusID) {
+
+	public void setStatusID(int statusID) {
 		this.statusID = statusID;
 	}
+
 	public String getValue() {
 		return value;
 	}
+
 	public void setValue(String value) {
 		this.value = value;
 	}
